@@ -15,7 +15,6 @@
 
     <build>
         <plugins>
-            <!-- Maven Compiler Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -24,13 +23,13 @@
                     <release>${java.version}</release>
                     <fork>true</fork>
                     <executable>${JAVA_HOME}/bin/javac</executable>
-                    <compilerArgs>
-                        <arg>--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg>
-                    </compilerArgs>
+                    <!-- Removed the problematic argument -->
+                    <!-- <compilerArgs> -->
+                    <!--     <arg>--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg> -->
+                    <!-- </compilerArgs> -->
                 </configuration>
             </plugin>
 
-            <!-- Maven Surefire Plugin -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
@@ -45,7 +44,6 @@
                 </configuration>
             </plugin>
 
-            <!-- Maven Cucumber Reporting Plugin -->
             <plugin>
                 <groupId>net.masterthought</groupId>
                 <artifactId>maven-cucumber-reporting</artifactId>
