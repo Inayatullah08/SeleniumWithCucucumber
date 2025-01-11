@@ -23,10 +23,6 @@
                     <release>${java.version}</release>
                     <fork>true</fork>
                     <executable>${JAVA_HOME}/bin/javac</executable>
-                    <!-- Removed the problematic argument -->
-                    <!-- <compilerArgs> -->
-                    <!--     <arg>--add-exports=jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED</arg> -->
-                    <!-- </compilerArgs> -->
                 </configuration>
             </plugin>
 
