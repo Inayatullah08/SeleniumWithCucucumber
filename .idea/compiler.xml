@@ -2,16 +2,21 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <!-- Set the default annotation processing profile -->
       <profile default="true" name="Default" enabled="true" />
+      <!-- Profile for Maven annotation processing -->
       <profile name="Maven default annotation processors profile" enabled="true">
+        <!-- Ensure the paths are correct for generated sources -->
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="CucumberBasics" />
+        <!-- Specify the module name correctly -->
+        <module name="SeleniumWithCucumber" />
       </profile>
     </annotationProcessing>
+    <!-- Specify the bytecode target level for the correct Java version -->
     <bytecodeTargetLevel>
-      <module name="CucumberBasics" target="10" />
+      <module name="SeleniumWithCucumber" target="17" />
     </bytecodeTargetLevel>
   </component>
 </project>
